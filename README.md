@@ -1,3 +1,2 @@
-# ittest
+# RestAssured vs Karate
 
-comparasion of RestAssured vs Karate
