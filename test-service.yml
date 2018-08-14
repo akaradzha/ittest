@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: test-service
+
+server:
+  port: 8083
+ 
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds:  5
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+hystrix:
+  command:
+    RemoteMessageClientCommand:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    RemoteMessageAnnotationClient:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
